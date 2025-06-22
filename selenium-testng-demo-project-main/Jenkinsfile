@@ -1,0 +1,19 @@
+pipeline { // The root block for a Declarative pipeline
+
+    agent any // Specifies that the pipeline can run on any available agent
+
+    stages { // Contains the sequence of stages in the pipeline
+
+        stage('Build') { // Defines a stage named "Build"
+
+            steps { // Steps block contains the tasks to execute within this stage
+
+                bat "git clone https://github.com/D-1988/TestNGDemo.git"
+
+            }
+
+        }
+
+    }
+
+}
