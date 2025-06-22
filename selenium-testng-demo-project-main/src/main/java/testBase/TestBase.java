@@ -11,8 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import lombok.extern.java.Log;
-import lombok.extern.slf4j.Slf4j;
+/*import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;*/
 import utils.DateUtil;
 import utils.PropertiesOperations;
 
@@ -28,7 +28,7 @@ import utils.PropertiesOperations;
 
 
 public class TestBase {
-	static Logger LOG = LoggerFactory.getLogger(TestBase.class);
+	//static Logger LOG = LoggerFactory.getLogger(TestBase.class);
 	protected static WebDriver driver;
 	public PropertiesOperations propObj;
 	protected DateUtil dateUtil;
@@ -46,12 +46,12 @@ public class TestBase {
 		case "edge" -> new EdgeDriver();
 		default -> throw new IllegalArgumentException("Unexpected value: " + browser);
 		};
-		LOG.info("WebDriver object is created for the browser : "+browser);
+		//LOG.info("WebDriver object is created for the browser : "+browser);
 		launchBrowser();
 	}
 
 	public static WebDriver getDriverObj() {
-		LOG.info("Returning the WebDriver object.....");
+	//	LOG.info("Returning the WebDriver object.....");
 		return driver;
 	}
 
@@ -60,12 +60,12 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 		driver.get(url);
-		LOG.info("Launching the application URL: "+url);
+	//	LOG.info("Launching the application URL: "+url);
 	}
 
 	@AfterClass
 	public void closeBrowser() throws IOException {
-		LOG.info("Closing the browser....");
+	//	LOG.info("Closing the browser....");
 		driver.close();
 		driver.quit();
 	}

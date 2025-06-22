@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertiesOperations {
-	private String propFileLocation = System.getProperty("user.dir") + "/src/test/resource/Config.properties";
+	private String propFileLocation = System.getProperty("user.dir") + "/selenium-testng-demo-project-main/src/test/resource/Config.properties";
 	private static PropertiesOperations propertiesObj;
 	private Properties prop;
 

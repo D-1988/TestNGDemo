@@ -6,15 +6,15 @@ import testBase.TestBase;
 
 public class PageObjects extends TestBase {
 
-	public LoginPageObjects loginPage;
-	public ProductPageObjects productPage;
-	public SideMenuAndSubMenuPageObjects sideMenu;
+	public pageObjectRepository.LoginPageObjects loginPage;
+	public pageObjectRepository.ProductPageObjects productPage;
+	public pageObjectRepository.SideMenuAndSubMenuPageObjects sideMenu;
 
 	@BeforeMethod
 	public void initPageObjects() {
-		loginPage = new LoginPageObjects(driver);
-		productPage = new ProductPageObjects(driver);
-		sideMenu = new SideMenuAndSubMenuPageObjects(driver);
+		loginPage = new pageObjectRepository.LoginPageObjects(driver);
+		productPage = new pageObjectRepository.ProductPageObjects(driver);
+		sideMenu = new pageObjectRepository.SideMenuAndSubMenuPageObjects(driver);
 
 	}
 
