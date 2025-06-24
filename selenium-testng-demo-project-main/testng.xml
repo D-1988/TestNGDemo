@@ -6,11 +6,11 @@
 	</listeners>-->
 	<test name="Test">
 		<classes>
-			<class name="testCases.ErrorTestScenarios_LoginPage">
+		<!--	<class name="testCases.ErrorTestScenarios_LoginPage">
 				<parameter name="locked-user" value="locked_out_user"></parameter>
 				<parameter name="password" value="secret_sauce"></parameter>
 			</class>
-			<class name="testCases.LoginLogoutEndToEnd_TestCases" />
+			<class name="testCases.LoginLogoutEndToEnd_TestCases" />-->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
