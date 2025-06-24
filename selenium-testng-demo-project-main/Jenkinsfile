@@ -4,6 +4,7 @@ pipeline {
      stage('Checkout Code') {
       steps {
         git 'https://github.com/D-1988/TestNGDemo.git'
+        sh "mvn -Dmaven.test.failure.ignore=true clean package"
       }
     }
     stage('Build') {
