@@ -4,12 +4,12 @@ pipeline {
      stage('Checkout Code') {
       steps {
         git 'https://github.com/D-1988/TestNGDemo.git'
-        sh "mvn -Dmaven.test.failure.ignore=true clean package"
+        sh "mvn clean install"
       }
     }
     stage('Build') {
       steps {
-        echo 'Building the project...'
+         sh "mnv test"
       }
     }
     stage('Test') {
