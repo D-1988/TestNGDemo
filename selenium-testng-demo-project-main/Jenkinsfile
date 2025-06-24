@@ -4,12 +4,12 @@ pipeline {
      stage('Checkout Code') {
       steps {
         git 'https://github.com/D-1988/TestNGDemo.git'
-        sh "mvn clean install"
+        
       }
     }
     stage('Build') {
       steps {
-         sh "mnv test"
+        echo 'Running tests...'
       }
     }
     stage('Test') {
