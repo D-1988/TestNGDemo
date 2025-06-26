@@ -14,6 +14,7 @@ steps:
   inputs:
     mavenPomFile: 'selenium-testng-demo-project-main/pom.xml'
     goals: 'clean test'
+    options: '-Dsurefire.suiteXmlFiles=testng.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
