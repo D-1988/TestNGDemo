@@ -12,7 +12,7 @@ steps:
   # Starter pipeline
 - task: Maven@4
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'selenium-testng-demo-project-main/pom.xml'
     goals: 'clean test'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
